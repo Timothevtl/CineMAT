@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="bookingstyle.css"/>
+    <title>Outil de reservation</title>
+  </head>
+  <body>
+    <form>
+    <div class="options">
+    <div class="movie-container form-field">
+      <label> Nom : </label>
+        <input type="text" class="info" id="nom">
+    </div>
+    <div class="movie-container">
+        <label> Prénom : </label>
+        <input type="text" class="info" id="prenom">
+      </div>
+      <div class="movie-container">
+        <label> Adresse email :</label>
+        <input type="text" class="email" id="mail">
+      </div>
+      <div class="movie-container">
+        <label>Film :</label>
+        <select id="movie">
+          <option value="10">Django</option>
+          <option value="10">La La Land</option>
+          <option value="10">1917</option>
+          <option value="10">Titanic</option>
+        </select>
+      </div>
+      <div class="movie-container">
+        <label for="from">Séance de : </label>
+            <select name="from" id="from">
+                <option value="" disabled selected>Choisir l'horaire...</option>
+                <option value="1">14H15 (VOSTFR)</option>
+                <option value="2">17H30 (VO)</option>
+                <option value="3">21H (VOSTFR)</option>
+            </select>
+      </div>
+    </div>
+    <button class="btn" onclick="popup()">Submit</button>
+</form>
+
+    <h2>Veuillez selectionner votre place à l'aide de l'outil ci-dessous</h2>
+    <ul class="showcase">
+      <li>
+        <div class="seat"></div>
+        <small>Disponible</small>
+      </li>
+      <li>
+        <div class="seat selected"></div>
+        <small>Selectionnée</small>
+      </li>
+      <li>
+        <div class="seat sold"></div>
+        <small>Occupée</small>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="screen"></div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+
+    <p class="text">
+      Vous avez choisi <span id="count">0</span> places pour un total de : <span
+        id="total"
+        >0</span
+      >€
+    </p>
+    <script src="booking.js"></script>
+  </body>
+</html>

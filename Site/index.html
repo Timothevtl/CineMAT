@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html lang="en">
+<script src="https://kit.fontawesome.com/1d637bdab0.js" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,500&family=Sen:wght@400;700;800&display=swap" 
+        rel="stylesheet">
+
+    <title>CineMAT</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container"><h1 class="logo">CineMAT</h1></div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a  class="menu-list-item" onclick="scrollUp()">Accueil</a>
+                    <a  class="menu-list-item" onclick="scrollAffiche()">À l'affiche</a>
+                    <a  class="menu-list-item"onclick="scrollClassic()">Classiques</a>
+                    <a  class="menu-list-item" onclick="scrollDown()">Nous Contacter</a>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <div>
+                    <div class="toggle">
+                        <i class="fa-solid fa-moon toggle-icon"></i>
+                        <i class="fa-solid fa-sun toggle-icon"></i>
+                        <div class="toggle-ball"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <i class="left-menu-icon fa-sharp fa-solid fa-magnifying-glass"></i>
+        <i class="left-menu-icon fa-solid fa-house"></i>
+        <i class="left-menu-icon fa-solid fa-users"></i>
+        <i class="left-menu-icon fa-solid fa-bookmark"></i>    
+        <i class="left-menu-icon fa-solid fa-tv"></i>
+        <i class="left-menu-icon fa-sharp fa-solid fa-hourglass-start"></i>    
+        <i class="left-menu-icon fa-solid fa-cart-shopping"></i>
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg');">
+                <img class="featured-title" src="img/f-t-1.png" alt="">
+                <p class="featured-description" >
+                    Avec l'aide d'un chasseur de primes allemand, un esclave affranchi entreprend de sauver sa femme d'un brutal propriétaire de plantation dans le Mississippi.
+                </p>
+                <button class="featured-button" id = "django" onclick="reservation()">Réserver une séance</button>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">A L'AFFICHE</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpeg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Un écrivain solitaire développe une relation improbable avec un système d'exploitation conçu pour répondre à tous ses besoins.</p>
+                            <button class="movie-list-item-button" onclick="navigate()">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/2.jpeg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/3.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/4.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/5.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/6.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/7.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/8.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/9.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/10.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/11.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/12.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/13.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/14.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/15.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/16.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-2.jpg');">
+                <img class="featured-title" src="img/f-t-2.png" alt="">
+                <p class="featured-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium soluta maiores, debitis delectus alias deserunt ratione at enim maxime aperiam ab natus reprehenderit sapiente nostrum nobis perspiciatis saepe quas perferendis?
+                </p>
+                <button class="featured-button">Réserver une séance</button>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">LES CLASSISQUES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/l.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/f.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/l.png" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/h.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/dd.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/e.png" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/f.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/g.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/k.png" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/shrek.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/aa.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/bb.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/cc.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/dd.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/sad.webp" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/h.webp" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Voir les séances</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Notre équipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Réseaux</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Newsletter</h1>
+                        <div class="footer-email-form" style="display: flex;">
+                            <input type="email" placeholder="Votre adresse email" 
+                            style=" margin-top: 40px;
+                            width: 250px;
+                            height: 35px;
+                            border-radius: 4px;
+                            outline: none;
+                            font-size: 1rem;
+                            padding-left: 0.5rem;">
+                            <input type="submit" value="Sign Up" id="footer-email-btn"
+                            style="
+                            width: 80px;
+                            height: 35px;
+                            margin: 40px;
+                            margin-left: 3px;
+                            background-color: green;
+                            border-radius: 5px;
+                            border: none;
+                            color: white;
+                            cursor: pointer;
+                            ">
+                        </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+    <script src="/app.js"></script>
+</body>
+</html>
